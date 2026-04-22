@@ -1,0 +1,2 @@
+# mysite
+Testing django course
