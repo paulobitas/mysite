@@ -1,0 +1,11 @@
+python manage.py runserver
+
+python manage.py makemigrations
+
+python manage.py migrate
+
+python manage.py createsuperuser
+Username: caco
+Email address: paulobitas@gmail.com
+Password: 123
+Password (again): 123
