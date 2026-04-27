@@ -9,3 +9,31 @@ Username: caco
 Email address: paulobitas@gmail.com
 Password: 123
 Password (again): 123
+
+python manage.py shell
+
+>>> from blog.models import Post
+>>> from django.contrib.auth.models import User
+>>> User.objects.all()
+>>> User.objects.last()
+>>> User.objects.filter(username='caco')
+>>> User.objects.filter(username='caco').last()
+>>> user = User.objects.filter(username = 'caco').first() <- Variável 'user' recebe o objeto 'caco'
+>>> user.id
+>>> user.pk
+user = User.objects.get(id=1) <- Variável 'user' recebe o objeto de id '1'
+>>> Post.objects.all()
+>>> post_1 = Post(title='Blog 1', content = 'First Post Content!', author = user)
+>>> post_1.save()
+>>> Post.objects.all()
+>>> Post.objects.title()
+>>> user = User.objects.filter(username = "caco").first()
+>>> post = Post.objects.first()
+>>> post.content
+>>> post.title
+>>> post.author_id
+>>> post.date_posted
+>>> user.post_set
+>>> user.post_set.all()
+>>> user.post_set.create(title = 'Blog 3', content = 'Third Post Content!')
+>>> exit()
