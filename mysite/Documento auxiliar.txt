@@ -37,3 +37,17 @@ user = User.objects.get(id=1) <- Variável 'user' recebe o objeto de id '1'
 >>> user.post_set.all()
 >>> user.post_set.create(title = 'Blog 3', content = 'Third Post Content!')
 >>> exit()
+
+
+Realizar instalação de crispy e bootstrap4
+pip install django-crispy-forms
+pip install crispy-bootstrap4
+
+if you need to use bootstrap4
+
+    pip install django-crispy-forms
+    pip install crispy-bootstrap4
+
+inside settings.py in the main app add INSTALLED_APPS = [ ... 'crispy_forms', 'crispy_bootstrap4', ... ] and CRISPY_TEMPLATE_PACK = 'bootstrap4' 
+
+inside your_html.html file add {% load crispy_forms_tags %} and you can use cripy_forms as you like
