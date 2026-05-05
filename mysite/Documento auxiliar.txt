@@ -51,3 +51,23 @@ if you need to use bootstrap4
 inside settings.py in the main app add INSTALLED_APPS = [ ... 'crispy_forms', 'crispy_bootstrap4', ... ] and CRISPY_TEMPLATE_PACK = 'bootstrap4' 
 
 inside your_html.html file add {% load crispy_forms_tags %} and you can use cripy_forms as you like
+
+python manage.py makemigrations
+
+pip install Pillow
+
+python manage.py makemigrations
+python manage.py migrate
+
+python manage.py shell
+
+>>> from django.contrib.auth.models import User
+>>> user = User.objects.filter(username = 'testuser').first()
+>>> user
+<User: testuser>
+>>> user.profile
+<Profile: testuser Profile>
+>>> user.profile.image
+<ImageFieldFile: default.jpg>
+>>> user.profile.image.url
+'/default.jpg'
