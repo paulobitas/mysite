@@ -39,6 +39,10 @@
                         <!-- Navbar Right Side -->
                         <div class="navbar-nav"> 
                             {% if user.is_authenticated %}
+                                <form method="POST" action="{% url 'post-create' %}" style="display: inline;">
+                                    {% csrf_token %}
+                                    <button type="submit" class="btn btn-outline-light btn-sm ml-2">New Post</button>
+                                </form> 
                                 <form method="POST" action="{% url 'profile' %}" style="display: inline;">
                                     {% csrf_token %}
                                     <button type="submit" class="btn btn-outline-light btn-sm ml-2">Profile</button>
