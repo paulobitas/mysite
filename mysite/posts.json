@@ -1,0 +1,27 @@
+[
+    { 
+        "title": "My updated Post",
+        "content": "This is my updated post content.",
+        "user_id": 1
+    },
+    { 
+        "title": "Second Post",
+        "content": "This is my updated post content2.",
+        "user_id": 2
+    },
+    { 
+        "title": "New travel locations",
+        "content": "This is my updated post content3.",
+        "user_id": 1
+    },
+    { 
+        "title": "The 5 best video game gen",
+        "content": "This is my updated post content4.",
+        "user_id": 3
+    },
+    { 
+        "title": "Not my updated Post",
+        "content": "This is my updated post content5.",
+        "user_id": 2
+    }
+]
