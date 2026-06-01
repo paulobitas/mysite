@@ -1,7 +1,7 @@
 {% extends "blog/base.html" %}
 {% block content %}
-    <h1>Blog do Paulo Home!</h1>
-    <p>This is the home page of my blog.</p>
+    <h1 class="mb-3">Posts by {{ view.kwargs.username }}</h1>
+    <p>This is the page for posts by {{ view.kwargs.username }} ({{ page_obj.paginator.count }} posts).</p>
 
     {% for post in posts%} 
         <article class="media content-section">
