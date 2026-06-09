@@ -10,6 +10,15 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
+""" Bloco de código para ler o arquivo de dados e extrair as informações necessárias para a configuração do Django. """
+import ast # Importando a biblioteca ast para ler o arquivo de dados
+
+with open("c://Users//paulo.oliveira//Desktop//dados.txt", "r") as file:
+    myFile = file.read()
+    myDict = ast.literal_eval(myFile)
+    # print(myDict["user"])
+
+
 import os
 from pathlib import Path
 
@@ -139,3 +148,5 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EMAILBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
+EMAIL_HOST_USER = myDict["user"]
+EMAIL_HOST_PASSWORD = myDict["password"]
