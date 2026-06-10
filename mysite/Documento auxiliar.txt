@@ -71,3 +71,9 @@ python manage.py shell
 <ImageFieldFile: default.jpg>
 >>> user.profile.image.url
 '/default.jpg'
+
+
+
+user:
+caco
+Omega325!
