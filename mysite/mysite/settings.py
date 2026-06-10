@@ -17,7 +17,7 @@ with open("c://Users//paulo.oliveira//Desktop//dados.txt", "r") as file:
     myFile = file.read()
     myDict = ast.literal_eval(myFile)
     # print(myDict["user"])
-
+"""Fim do bloco de código para ler o arquivo de dados e extrair as informações necessárias para a configuração do Django. """
 
 import os
 from pathlib import Path
@@ -144,9 +144,9 @@ LOGIN_REDIRECT_URL = 'blog-home'
 
 LOGIN_URL = 'login'
 
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EMAILBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend' # Working email backend configuration for sending emails through Gmail's SMTP server. This allows the application to send emails, such as password reset emails, using the specified email account.
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = myDict["user"]
-EMAIL_HOST_PASSWORD = myDict["password"]
+EMAIL_HOST_PASSWORD = myDict["project-password"] # Use 2-factor authentication and generate an app password for better security when using Gmail's SMTP server.
