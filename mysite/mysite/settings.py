@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 """ Bloco de código para ler o arquivo de dados e extrair as informações necessárias para a configuração do Django. """
 import ast # Importando a biblioteca ast para ler o arquivo de dados
 
-with open("c://Users//paulo.oliveira//Desktop//dados.txt", "r") as file:
+with open("c://Users//paulo.oliveira//Desktop//dados.txt", "r") as file:  # !!! Necessita mascarar endereço
     myFile = file.read()
     myDict = ast.literal_eval(myFile)
     # print(myDict["user"])
